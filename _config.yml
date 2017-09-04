@@ -4,7 +4,7 @@ locale                   : "en"
 title                    : "Execution Steps"
 title_separator          : "-"
 description              : "Blog for Hany Morcos."
-url                      : "https://theconfused.me" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://hanymorcos.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/sparrow" # the subpath of your site, e.g. "/blog" leave blank if no subpath
 
 # Site Author
