@@ -1,5 +1,5 @@
 {
-  "id": "http://localhost:8080/schemas/sdos/tool.json",
+  "id": "http://www.executionsteps.com/stix2/schemas/sdos/tool.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "tool",
   "description": "Tools are legitimate software that can be used by threat actors to perform attacks.",

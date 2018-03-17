@@ -1,5 +1,5 @@
 {
-  "id": "http://localhost:8080/schemas/sros/sighting.json",
+  "id": "http://www.executionsteps.com/stix2/schemas/sros/sighting.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "sighting",
   "description": "A Sighting denotes the belief that something in CTI (e.g., an indicator, malware, tool, threat actor, etc.) was seen.",

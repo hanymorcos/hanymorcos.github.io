@@ -1,5 +1,5 @@
 {
-  "id": "http://localhost:8080/schemas/sdos/indicator.json",
+  "id": "http://www.executionsteps.com/stix2/schemas/sdos/indicator.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "indicator",
   "description": "Indicators contain a pattern that can be used to detect suspicious or malicious cyber activity.",

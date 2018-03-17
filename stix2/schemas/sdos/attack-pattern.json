@@ -1,12 +1,12 @@
 {
-  "id": "http://localhost:8080/schemas/sdos/attack-pattern.json",
+  "id": "http://www.executionsteps.com/stix2/schemas/sdos/attack-pattern.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "attack-pattern",
   "description": "Attack Patterns are a type of TTP that describe ways that adversaries attempt to compromise targets. ",
   "type": "object",
   "allOf": [
     {
-      "$ref": "http://localhost:8080/schemas/common/core.json"
+      "$ref": "http://www.executionsteps.com/stix2/schemas/common/core.json"
     },
     {
       "properties": {

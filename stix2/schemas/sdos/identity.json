@@ -1,5 +1,5 @@
 {
-  "id": "http://localhost:8080/schemas/sdos/identity.json",
+  "id": "http://www.executionsteps.com/stix2/schemas/sdos/identity.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "identity",
   "description": "Identities can represent actual individuals, organizations, or groups (e.g., ACME, Inc.) as well as classes of individuals, organizations, or groups.",

@@ -1,5 +1,5 @@
 {
-  "id": "http://localhost:8080/schemas/observables/url.json",
+  "id": "http://www.executionsteps.com/stix2/schemas/observables/url.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "url",
   "description": "The URL Object represents the properties of a uniform resource locator (URL).",
