@@ -24,8 +24,6 @@ form to validate your STIX is valid or invalid.
 <script>
 
 function submitStix2(){
-
-	alert(jQuery("textarea#stix2").val());
 	jQuery.ajax({
 	    type: "POST",
 	    url: " https://s4gb976bx0.execute-api.us-east-1.amazonaws.com/dev/stix2",
