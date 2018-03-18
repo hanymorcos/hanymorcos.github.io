@@ -31,6 +31,7 @@ function submitStix2(){
 	    url: " https://s4gb976bx0.execute-api.us-east-1.amazonaws.com/dev/stix2",
 	    // The key needs to match your method's input parameter (case-sensitive).
 	    data: jQuery("textarea#stix2").val(),
+	    async: false,
 	    contentType: "application/json; charset=utf-8",
 	    dataType: "json",
 	    success: function(data){alert(data);},
