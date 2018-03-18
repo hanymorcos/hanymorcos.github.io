@@ -17,7 +17,7 @@ form to validate your STIX is valid or invalid.
 <textarea id="stix2" rows="4" cols="50" style="margin: 0px; width: 366px; height: 92px;"></textarea>
 </div>
 
- <input type="button" onclick="submitStix2()" value="Send Request"><
+ <input type="button" onclick="submitStix2()" value="Send Request">
 </form>
 
 
