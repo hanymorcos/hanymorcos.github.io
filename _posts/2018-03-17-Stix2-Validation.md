@@ -47,12 +47,16 @@ function submitStix2(){
 	    contentType: "application/text; charset=utf-8",
 	    dataType: "text",
 	    success: function(data){
-	    	if(data.message == "valid bundle")
+
+	    	packet = JSON.parse(data);
+
+	    	if(packet.message == "valid bundle")
 	    	{
+	    		
                 jQuery("#border").addClass("correct");
 	    	}
 
-	    	if(data.message == "invalid bundle")
+	    	if(packet.message == "invalid bundle")
 	    	{
                 jQuery("#border").addClass("error");
 	    	}
