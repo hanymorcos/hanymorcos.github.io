@@ -38,6 +38,10 @@ form to validate your STIX is valid or invalid.
 <script>
 
 function submitStix2(){
+
+	jQuery("#border").removeClass("correct");
+	jQuery("#border").removeClass("error");
+	
 	jQuery.ajax({
 	    type: "POST",
 	    url: " https://s4gb976bx0.execute-api.us-east-1.amazonaws.com/dev/stix2",
