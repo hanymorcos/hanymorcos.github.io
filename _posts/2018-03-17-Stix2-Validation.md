@@ -22,7 +22,7 @@ form to validate your STIX is valid or invalid.
   .correct {
     border-style: solid;
     border-width: wide;
-    border-color: red;
+    border-color: green;
   }
 </style>
 
@@ -52,7 +52,7 @@ function submitStix2(){
 
 	    	if(packet.message == "valid bundle")
 	    	{
-	    		
+
                 jQuery("#border").addClass("correct");
 	    	}
 
