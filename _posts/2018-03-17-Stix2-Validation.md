@@ -27,9 +27,7 @@ form to validate your STIX is valid or invalid.
 </style>
 
 <form action="#">
-<div id="border">
 <textarea id="stix2" rows="4" cols="50" style="margin: 0px; width: 366px; height: 92px;"></textarea>
-</div>
 
  <input type="button" onclick="submitStix2()" value="Send Request">
 </form>
@@ -39,8 +37,8 @@ form to validate your STIX is valid or invalid.
 
 function submitStix2(){
 
-	jQuery("#border").removeClass("correct");
-	jQuery("#border").removeClass("error");
+	jQuery("textarea#stix2").removeClass("correct");
+	jQuery("textarea#stix2").removeClass("error");
 	
 	jQuery.ajax({
 	    type: "POST",
@@ -57,12 +55,12 @@ function submitStix2(){
 	    	if(packet.message == "valid bundle")
 	    	{
 
-                jQuery("#border").addClass("correct");
+                jQuery("textarea#stix2").addClass("correct");
 	    	}
 
 	    	if(packet.message == "invalid bundle")
 	    	{
-                jQuery("#border").addClass("error");
+                jQuery("textarea#stix2").addClass("error");
 	    	}
 
 
