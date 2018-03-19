@@ -12,8 +12,22 @@ form to validate your STIX is valid or invalid.
 
 <!-- Expandable Textfield -->
 
+<style>
+  .error {
+    border-style: solid;
+    border-width: wide;
+    border-color: red;
+  }
+
+  .correct {
+    border-style: solid;
+    border-width: wide;
+    border-color: red;
+  }
+</style>
+
 <form action="#">
-<div>
+<div id="border">
 <textarea id="stix2" rows="4" cols="50" style="margin: 0px; width: 366px; height: 92px;"></textarea>
 </div>
 
@@ -32,7 +46,19 @@ function submitStix2(){
 	    async: false,
 	    contentType: "application/text; charset=utf-8",
 	    dataType: "text",
-	    success: function(data){alert(data);},
+	    success: function(data){
+	    	if(data.message == "valid bundle")
+	    	{
+                jQuery("#border").addClass("correct");
+	    	}
+
+	    	if(data.message == "invalid bundle")
+	    	{
+                jQuery("#border").addClass("error");
+	    	}
+
+
+	    },
 	    failure: function(errMsg) {
 	        alert(errMsg);
 	    }
