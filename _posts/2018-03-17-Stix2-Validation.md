@@ -46,9 +46,9 @@ function submitStix2(){
 	    // The key needs to match your method's input parameter (case-sensitive).
 	    data: jQuery("textarea#stix2").val(),
 	    async: false,
-	    success: function(data){
+	    complete: function(xhr){
 
-	    	packet = JSON.parse(data);
+	    	packet = JSON.parse(xhr.responseText);
 
 	    	if(packet.message == "valid bundle")
 	    	{
