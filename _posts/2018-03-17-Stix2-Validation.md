@@ -46,7 +46,6 @@ function submitStix2(){
 	    // The key needs to match your method's input parameter (case-sensitive).
 	    data: jQuery("textarea#stix2").val(),
 	    async: false,
-	    contentType: "text/plain",
 	    success: function(data){
 
 	    	packet = JSON.parse(data);
