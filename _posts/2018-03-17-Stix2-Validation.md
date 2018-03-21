@@ -47,7 +47,6 @@ function submitStix2(){
 	    data: jQuery("textarea#stix2").val(),
 	    async: false,
 	    contentType: "text/plain",
-        crossDomain: false,
 	    dataType: "text",
 	    success: function(data){
 
