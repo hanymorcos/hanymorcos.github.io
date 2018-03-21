@@ -46,6 +46,7 @@ function submitStix2(){
 	    // The key needs to match your method's input parameter (case-sensitive).
 	    data: jQuery("textarea#stix2").val(),
 	    async: false,
+		crossDomain: true,
 	    complete: function(xhr){
 
 	    	if (xhr.readyState == 4 && xhr.status == 200)
