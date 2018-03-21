@@ -46,23 +46,24 @@ function submitStix2(){
 	    // The key needs to match your method's input parameter (case-sensitive).
 	    data: jQuery("textarea#stix2").val(),
 	    async: false,
-	    success: function(data){
+	    complete: function(xhr){
 
-	    	alert("falafel");
-	    	packet = JSON.parse(data);
-
-	    	if(packet.message == "valid bundle")
+	    	if (xhr.readyState == 4 && xhr.status == 200)
 	    	{
 
-                jQuery("textarea#stix2").addClass("correct");
-	    	}
+		    	packet = JSON.parse(xhr.responseText);
 
-	    	if(packet.message == "invalid bundle")
-	    	{
-                jQuery("textarea#stix2").addClass("error");
-	    	}
+		    	if(packet.message == "valid bundle")
+		    	{
+	                jQuery("textarea#stix2").addClass("correct");
+		    	}
 
+		    	if(packet.message == "invalid bundle")
+		    	{
+	                jQuery("textarea#stix2").addClass("error");
+		    	}
 
+	     }
 	    },
 	    failure: function(errMsg) {
 	        alert(errMsg);
