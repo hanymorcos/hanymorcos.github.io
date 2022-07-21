@@ -12,7 +12,7 @@ const originals = allArticles.map((a) => ({
   url: `/articles/${a.slug}`,
   cover: a.cover,
   category: a.category,
-  author: 'Hany Morcos Liou',
+  author: 'Hany Morcos',
   avatar: '/optimized/portrait-sm.png',
   social: socials.github,
   external: false,
