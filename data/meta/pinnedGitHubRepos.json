@@ -1,0 +1,23 @@
+[
+  {
+    "id": 87190989,
+    "name": "typescript-express-inversify-typeorm-mysql",
+    "htmlUrl":
+      "https://github.com/hanymorcos/typescript-express-inversify-typeorm-mysql",
+      "homepage": "",
+    "description": "Typescript web application example",
+    "language": "TypeScript",
+    "forksCount": 5,
+    "stargazersCount": 6,
+    "topics": [
+      "angular2",
+      "express",
+      "inversify",
+      "observable",
+      "typeorm",
+      "typescript"
+    ],
+    "createdAt": "2017-04-04T13:37:58Z",
+    "updatedAt": "2022-02-01T14:52:23Z"
+  }
+]

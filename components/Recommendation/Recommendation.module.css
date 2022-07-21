@@ -1,0 +1,96 @@
+.wrap {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.wrap h2 {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.15;
+}
+
+.horizontal {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.grid {
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 26rem;
+  color: inherit;
+  border: 1px solid var(--divider-color);
+  border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(100vw - 4rem);
+  }
+}
+
+.card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.cardAction {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #eaeaea;
+  text-align: center;
+}
+
+.avatarColorBlue {
+  background-color: rgba(0, 124, 240, 0.7);
+}
+
+.avatarColorRed {
+  background-color: rgba(255, 0, 128, 0.7);
+}
+
+.avatarColorYellow {
+  background-color: rgba(249, 203, 40, 0.7);
+}
+
+.avatar > svg {
+  vertical-align: bottom;
+}
+
+.body {
+  flex-grow: 1;
+}
+
+.footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--divider-color);
+  text-decoration: underline;
+  transition: color 0.15s ease;
+}
+
+.footer:focus,
+.footer:active,
+.footer:hover {
+  color: rgba(0, 124, 240, 1);
+}
+
+.quote {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,41 @@
+.wrap {
+  margin-top: 1rem;
+}
+
+.description {
+  max-width: 720px;
+}
+
+.list {
+  max-width: 720px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: space-between;
+  gap: 1rem 0.5rem;
+}
+
+.list > * {
+  flex-basis: calc(50% - 0.5rem);
+}
+
+@media (max-width: 768px) {
+  .list {
+    flex-direction: column;
+  }
+  .list > * {
+    flex-basis: 100%;
+  }
+}
+
+.link {
+  margin-top: 1rem;
+  transition: color 0.15s ease;
+}
+
+.link:active,
+.link:hover {
+  color: rgba(0, 124, 240, 1);
+}
