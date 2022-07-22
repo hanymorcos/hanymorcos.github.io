@@ -1768,6 +1768,11 @@
             children: [
               (0, v.jsxs)(w(), {
                 children: [
+                  (0, v.jsx)('script', {
+                    async: !0,
+                    src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7095965118332792',
+                    crossOrigin: 'anonymous',
+                  }),
                   (0, v.jsx)('link', {
                     rel: 'apple-touch-icon',
                     sizes: '180x180',
