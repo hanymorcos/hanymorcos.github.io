@@ -29,6 +29,11 @@ export default function Home() {
             content="XzmO5hA3kc7-91MB68LpYNOvXxLasSYbiecgmnWuFL8"
           />
         </Head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7095965118332792"
+          crossorigin="anonymous"
+        ></script>
 
         <main className={styles.main}>
           <Hero />
