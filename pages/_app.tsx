@@ -16,6 +16,12 @@ function MyApp({ Component, pageProps }) {
     <PlausibleProvider domain="hanymorcos.github.io" trackOutboundLinks>
       <SchemeProvider>
         <Head>
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7095965118332792"
+            crossOrigin="anonymous"
+          ></script>
+
           <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -33,11 +39,6 @@ function MyApp({ Component, pageProps }) {
           <meta name="msapplication-TileColor" content="#007cf0" />
           <meta name="theme-color" content="#ffff" />
           <meta name="description" content={socials.description} />
-          <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7095965118332792"
-            crossOrigin="anonymous"
-          ></script>
         </Head>
 
         <div id="outer-container">
