@@ -9,39 +9,45 @@ import Link from '../Link'
 import Section from '../Section'
 
 export default function Recommendation() {
-  return (
-    <Section fluid heading="See what people say about me">
-      <div className={styles.horizontal}>
-        <div className={styles.grid}>
-          {recommendations.map((recom) => (
-            <article className={styles.card} key={recom.id}>
-              <div className={styles.body}>
-                <MdOutlineFormatQuote className={styles.quote} />
-                <p>{recom.quote}</p>
-                <div className={styles.cardAction}>
-                  <span
-                    className={clsx(styles.avatar, {
-                      [styles.avatarColorBlue]: recom.type === 'entrepreneur',
-                      [styles.avatarColorRed]: recom.type === 'engineer',
-                      [styles.avatarColorYellow]: recom.type === 'manager',
-                    })}
-                  >
-                    {recom.type === 'entrepreneur' && <FiAward />}
-                    {recom.type === 'engineer' && <FiSmile />}
-                    {recom.type === 'manager' && <FiAnchor />}
-                  </span>
-                  <span>{recom.title}</span>
+  if (recommendations.length > 0)
+    return (
+      <Section fluid heading="See what people say about me">
+        <div className={styles.horizontal}>
+          <div className={styles.grid}>
+            {recommendations.map((recom) => (
+              <article className={styles.card} key={recom.id}>
+                <div className={styles.body}>
+                  <MdOutlineFormatQuote className={styles.quote} />
+                  <p>{recom.quote}</p>
+                  <div className={styles.cardAction}>
+                    <span
+                      className={clsx(styles.avatar, {
+                        [styles.avatarColorBlue]: recom.type === 'entrepreneur',
+                        [styles.avatarColorRed]: recom.type === 'engineer',
+                        [styles.avatarColorYellow]: recom.type === 'manager',
+                      })}
+                    >
+                      {recom.type === 'entrepreneur' && <FiAward />}
+                      {recom.type === 'engineer' && <FiSmile />}
+                      {recom.type === 'manager' && <FiAnchor />}
+                    </span>
+                    <span>{recom.title}</span>
+                  </div>
                 </div>
-              </div>
-              <div className={styles.footer}>
-                <Link href={socials.linkedin} target="_blank" rel="noreferrer">
-                  See more on Linkedin
-                </Link>
-              </div>
-            </article>
-          ))}
+                <div className={styles.footer}>
+                  <Link
+                    href={socials.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    See more on Linkedin
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
-    </Section>
-  )
+      </Section>
+    )
+  else return <p></p>
 }
