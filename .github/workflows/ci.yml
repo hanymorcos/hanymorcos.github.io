@@ -3,7 +3,7 @@ name: Production Release Workflow
 on:
   push:
     branch:
-      - main
+      - master
 
 env:
   GIT_USER_EMAIL: ${{secrets.GIT_USER_EMAIL}}
@@ -90,7 +90,7 @@ jobs:
 
       - name: Push to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
+        if: ${{ github.ref == 'refs/heads/master' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
@@ -120,9 +120,9 @@ jobs:
           git config --global user.name "$GIT_USER_NAME"
 
       - name: Dry Run
-        if: ${{ github.ref != 'refs/heads/main'}}
+        if: ${{ github.ref != 'refs/heads/master'}}
         run: yarn release --dry-run
 
       - name: Release
-        if: ${{ github.ref == 'refs/heads/main' }}
+        if: ${{ github.ref == 'refs/heads/master' }}
         run: yarn release --ci
