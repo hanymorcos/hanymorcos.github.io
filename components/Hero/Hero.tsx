@@ -15,21 +15,21 @@ export default function Hero() {
           className={clsx(styles.title, styles.heroTitle, styles.heroTitle_1)}
         >
           <span className={clsx(styles.title, styles.animatedTitle_1)}>
-            {'Software Engineer'}
+            {'Software Engineer '}
           </span>
         </span>
         <span
           className={clsx(styles.title, styles.heroTitle, styles.heroTitle_2)}
         >
           <span className={clsx(styles.title, styles.animatedTitle_2)}>
-            {'Developer Advocate'}
+            {'Developer Advocate '}
           </span>
         </span>
         <span
           className={clsx(styles.title, styles.heroTitle, styles.heroTitle_3)}
         >
           <span className={clsx(styles.title, styles.animatedTitle_3)}>
-            {'Content Creator'}
+            {'Content Creator '}
           </span>
         </span>
       </h1>
