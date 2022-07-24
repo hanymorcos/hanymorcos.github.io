@@ -80,7 +80,7 @@
 }
 
 .heroTitle_3::before {
-  content: 'content creator';
+  content: 'Content Creator';
   position: absolute;
   display: block;
   width: fit-content;
