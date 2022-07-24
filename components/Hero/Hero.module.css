@@ -28,7 +28,7 @@
 }
 
 .heroTitle_1::before {
-  content: 'software engineer ';
+  content: 'Software Engineer ';
   position: absolute;
   display: block;
   width: fit-content;
@@ -54,7 +54,7 @@
 }
 
 .heroTitle_2::before {
-  content: 'YouTuber';
+  content: 'Developer Advocate';
   position: absolute;
   display: block;
   width: fit-content;
@@ -80,7 +80,7 @@
 }
 
 .heroTitle_3::before {
-  content: 'writer ';
+  content: 'Developer Advocate';
   position: absolute;
   display: block;
   width: fit-content;
