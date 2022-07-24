@@ -42,6 +42,22 @@ function MyApp({ Component, pageProps }) {
         </Head>
 
         <div id="outer-container">
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-C4BR8LSDBE"
+          ></script>
+          <script>
+            dangerouslySetInnerHTML=
+            {{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-C4BR8LSDBE');
+            `,
+            }}
+          </script>
           <Nav />
           <Menubar />
           <div id="page-wrap">
