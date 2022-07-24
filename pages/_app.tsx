@@ -21,7 +21,22 @@ function MyApp({ Component, pageProps }) {
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7095965118332792"
             crossOrigin="anonymous"
           ></script>
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-C4BR8LSDBE"
+          ></script>
+          <script>
+            dangerouslySetInnerHTML=
+            {{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
+            gtag('config', 'G-C4BR8LSDBE');
+            `,
+            }}
+          </script>
           <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -42,22 +57,6 @@ function MyApp({ Component, pageProps }) {
         </Head>
 
         <div id="outer-container">
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-C4BR8LSDBE"
-          ></script>
-          <script>
-            dangerouslySetInnerHTML=
-            {{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-C4BR8LSDBE');
-            `,
-            }}
-          </script>
           <Nav />
           <Menubar />
           <div id="page-wrap">
