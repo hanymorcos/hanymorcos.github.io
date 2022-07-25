@@ -98,7 +98,7 @@ jobs:
         run: yarn fulltext-search
         
       - name: Install next 
-        run: npm i next 
+        run: npm i next@12.2.2
         
       - name: Export Static Assets
         run: yarn export
