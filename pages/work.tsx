@@ -27,10 +27,27 @@ export default function Work() {
             thoughtful user experience and great performance.
           </p>
           <p>
-            I've spent over {new Date().getFullYear() - 2013} years working on
-            web engineering in startups, public tech companies, and Fortune 500
-            enterprises. I've built features, architectures, and infrastructure
-            for customer-facing products and enterprise software.
+            I've spent over {new Date().getFullYear() - 1998} years working on
+            web engineering in startups, Federal Government, and United States
+            Military. I've built features, architectures, and infrastructure for
+            customer-facing products and enterprise software.
+          </p>
+          <p>
+            Initially, I was a C/C++-Developer working with CORBA middleware.
+            CORBA was the first implementation of the bus service. I went on to
+            develop VBA and Micros in Access Database. I learned how to control
+            features in Microsoft Access that's not available to the average
+            user.
+          </p>
+          <p>
+            As IT changes, I changed as well, I went to become an Oracle DBA and
+            PL/SQL developer. I got certified and learned alot from it. After
+            Oracle, I learned Java J2EE and Spring Framework. I became a
+            microsoervices developer.
+          </p>
+          <p>
+            Currently, I'm a fullstack developer and polygot developer. I enjoy
+            coding in Javascript, Python, and Java.
           </p>
           <div className={styles.repos}>
             {repos.map((repo) => (
