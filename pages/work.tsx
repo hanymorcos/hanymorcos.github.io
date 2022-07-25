@@ -32,39 +32,6 @@ export default function Work() {
             enterprises. I've built features, architectures, and infrastructure
             for customer-facing products and enterprise software.
           </p>
-          <div className={styles.project}>
-            <div className={styles.projectDescription}>
-              <h3>
-                <Link
-                  href="https://www.spes.me"
-                  className={styles.link}
-                  aria-label="Go to https://spes.me"
-                >
-                  Spes
-                </Link>
-              </h3>
-              <p>
-                Reading turned my life around, and I believe it can turn yours
-                too. There're so many books full of wisdom but it's hard to find
-                yourself a book among the overwhelming options. So I'm giving
-                away a book every month to a subscriber and help you find your
-                next book to read. Sign up! Hopefully you'll be inspired too:)
-              </p>
-              <Link
-                href="https://www.spes.me"
-                className={styles.cfa}
-                aria-label="Go to https://spes.me"
-              >
-                Visit Spes
-              </Link>
-            </div>
-            <div className={styles.imageContainer}>
-              <div className={styles.image}>
-                <img src="/optimized/raw/spes.webp" alt="Spes" loading="lazy" />
-                <div className={styles.imageShadow}></div>
-              </div>
-            </div>
-          </div>
           <div className={styles.repos}>
             {repos.map((repo) => (
               <section className={styles.grid} key={repo.id}>
