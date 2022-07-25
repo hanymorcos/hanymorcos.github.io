@@ -5,34 +5,32 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
 >
   <url>
-    <loc>https://hanymorcos.github.io/contact</loc>
+    <loc>https://hany.tech/contact</loc>
     <lastmod>2022-07-25</lastmod>
   </url>
 
   <url>
-    <loc>https://hanymorcos.github.io/expertise</loc>
+    <loc>https://hany.tech/expertise</loc>
     <lastmod>2022-07-25</lastmod>
   </url>
 
   <url>
-    <loc>https://hanymorcos.github.io/</loc>
+    <loc>https://hany.tech/</loc>
     <lastmod>2022-07-25</lastmod>
   </url>
 
   <url>
-    <loc>https://hanymorcos.github.io/now</loc>
+    <loc>https://hany.tech/now</loc>
     <lastmod>2022-07-25</lastmod>
   </url>
 
   <url>
-    <loc>https://hanymorcos.github.io/work</loc>
+    <loc>https://hany.tech/work</loc>
     <lastmod>2022-07-25</lastmod>
   </url>
 
   <url>
-    <loc
-      >https://hanymorcos.github.io/articles/binary-tree-insertion-in-rust</loc
-    >
+    <loc>https://hany.tech/articles/binary-tree-insertion-in-rust</loc>
     <lastmod>2022-07-25</lastmod>
   </url>
 </urlset>
