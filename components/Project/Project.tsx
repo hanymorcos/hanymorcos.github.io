@@ -21,9 +21,7 @@ export default function Project() {
         <span role="img" aria-label="sparkles">
           {'✨ '}
         </span>
-        I enjoy contributing to open source communities in React, Next.js,
-        static analysis, and tooling. I'm also a creator and maintainer of a few{' '}
-        <Link href={socialsTs.npm}>npm packages</Link>.
+        I enjoy contributing to open source communities whenever I have time.
       </p>
       <div className={styles.list}>
         {filteredRepos.map((repo) => (

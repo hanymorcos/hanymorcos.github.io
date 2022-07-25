@@ -16,11 +16,8 @@ export default function Publication() {
         <span role="img" aria-label="heart">
           {'❤️ '}
         </span>
-        writing. I share frequently about what I learned in TypeScript, Rust,
-        and the subtle things in web technology that give you an "AHA!" moment.
-        Some of my articles are featured in publications such as{' '}
-        <Link href={socialsTs.medium}>Better Programming</Link> and{' '}
-        <Link href={socialsTs.hackernoon}>Hacker Noon</Link>.
+        writing. I enjoy writing and sharing about technical tidbits for new
+        users.
       </p>
       <div className={styles.list}>
         {publication.map((article) => (
