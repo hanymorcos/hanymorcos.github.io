@@ -1,11 +1,11 @@
 {
   "name": "hanymorcos.github.io",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build ",
-    "postbuild": "yarn sitemap && yarn rss && yarn fulltext-search",
+    "postbuild": "yarn sitemap && yarn rss",
     "start": "next start",
     "export": "next export ",
     "lint": "eslint '**/*.{js,ts,jsx,tsx}'",
