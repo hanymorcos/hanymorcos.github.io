@@ -7,3 +7,6 @@ members = [
 exclude = [
   "wasm/fulltext-search"
 ]
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
