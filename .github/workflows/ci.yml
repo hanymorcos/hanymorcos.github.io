@@ -90,9 +90,6 @@ jobs:
         
       - name: Install wasm-opt
         run: npm i wasm-opt
-               
-      - name: Install twiggy
-        run: npm i wasm-opt
       
       - name: Install twiggy
         run: cargo install twiggy
