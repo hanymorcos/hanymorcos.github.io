@@ -87,9 +87,9 @@ jobs:
 
       - name: Export Static Assets
         run: yarn export
-
+      
       - name: Create CNAME File 
-        run: echo \"hany.tech\" > out/CNAME
+        run: echo "hany.tech" > out/CNAME
 
       - name: Push to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
