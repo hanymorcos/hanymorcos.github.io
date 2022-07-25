@@ -85,6 +85,9 @@ jobs:
       - name: Build project
         run: yarn build
 
+      - name: Export Static Assets
+        run: yarn export
+
       - name: Install WASM-PACK
         run: npm i wasm-pack
         
@@ -97,12 +100,6 @@ jobs:
       - name: Build WASM
         run: yarn fulltext-search
         
-      - name: Install next 
-        run: npm i next@12.2.2
-        
-      - name: Export Static Assets
-        run: yarn export
-      
       - name: Create CNAME File 
         run: echo "hany.tech" > out/CNAME
 
