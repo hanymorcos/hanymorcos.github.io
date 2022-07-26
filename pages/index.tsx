@@ -22,13 +22,7 @@ export default function Home() {
       imageHeight="682"
     >
       <div className={styles.container}>
-        <Head>
-          {/* Google Search Console */}
-          <meta
-            name="google-site-verification"
-            content="XzmO5hA3kc7-91MB68LpYNOvXxLasSYbiecgmnWuFL8"
-          />
-        </Head>
+        <Head>{/* Google Search Console */}</Head>
 
         <main className={styles.main}>
           <Hero />
