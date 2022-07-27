@@ -1,7 +1,7 @@
 import Analytics from 'analytics'
 import googleAnalytics from '@analytics/google-analytics'
 
-const mysiteanalytic = Analytics({
+export const mysiteanalytic = Analytics({
   app: 'awesome-app',
   plugins: [
     googleAnalytics({
@@ -9,6 +9,3 @@ const mysiteanalytic = Analytics({
     }),
   ],
 })
-
-/* Track a page view */
-mysiteanalytic.page()
