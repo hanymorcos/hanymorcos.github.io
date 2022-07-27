@@ -40,6 +40,8 @@
     ]
   },
   "dependencies": {
+    "@analytics/google-analytics": "^1.0.3",
+    "analytics": "^0.8.1",
     "clsx": "^1.1.1",
     "next": "^12.2.2",
     "next-plausible": "^3.1.9",

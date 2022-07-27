@@ -10,23 +10,11 @@ import socials from '../.generated/meta/socialsTs'
 import Menubar from '../components/Menubar'
 import SchemeProvider from '../components/SchemeProvider'
 import PlausibleProvider from 'next-plausible'
-import { useRouter } from "next/router";
-import { useEffect } from "react";
-import * as gtag from "../utils/gtag";
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter();
-
-  useEffect(() => {
-    const handleRouteChange = (url: URL) => {
-      gtag.pageview(url);
-    };
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
-
+  const router = useRouter()
 
   return (
     <PlausibleProvider domain="hanymorcos.github.io" trackOutboundLinks>
