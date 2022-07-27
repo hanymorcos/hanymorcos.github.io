@@ -62,8 +62,8 @@ export default function SeoContainer({
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@hanymorcos" />
-        <meta name="twitter:creator" content="@hanymorcos" />
+        <meta name="twitter:site" content="@MrHanyMorcos" />
+        <meta name="twitter:creator" content="@MrHanyMorcos" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
