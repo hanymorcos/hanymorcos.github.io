@@ -10,17 +10,28 @@ import socials from '../.generated/meta/socialsTs'
 import Menubar from '../components/Menubar'
 import SchemeProvider from '../components/SchemeProvider'
 import PlausibleProvider from 'next-plausible'
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import * as gtag from "../utils/gtag";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url: URL) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
+
   return (
     <PlausibleProvider domain="hanymorcos.github.io" trackOutboundLinks>
       <SchemeProvider>
         <Head>
-          <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7095965118332792"
-            crossOrigin="anonymous"
-          ></script>
           <link
             rel="apple-touch-icon"
             sizes="180x180"
