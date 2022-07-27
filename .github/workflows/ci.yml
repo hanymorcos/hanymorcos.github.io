@@ -81,24 +81,15 @@ jobs:
 
       - name: Run prepare scripts
         run: yarn prepare
+      
+      - name: install packages
+        run: yarn
         
       - name: Build project
         run: yarn build
 
       - name: Export Static Assets
         run: yarn export
-
-      - name: Install WASM-PACK
-        run: npm i wasm-pack
-        
-      - name: Install wasm-opt
-        run: npm i wasm-opt
-      
-      - name: Install twiggy
-        run: cargo install twiggy
-        
-      - name: Build WASM
-        run: yarn fulltext-search
         
       - name: Create CNAME File 
         run: echo "hany.tech" > out/CNAME
