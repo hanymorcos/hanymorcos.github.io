@@ -9,3 +9,49 @@ coverHeight: '682'
 ---
 
 
+## TL;DR
+
+- 🌳 We'll talk about how to use an NPM to connect our site to Google Analytics
+
+---
+
+I spent a long time determinning the correct approach to add my site to google analytics. Google only provides
+a javascript snippet to add to your header menu. I didn't like the approach, it didn't go nicely with hour my
+website was implemented. After doing some research and read few github chats and issues, I stumpled on a Node
+package that I could use for my site. 
+
+The package is called analytics, by Davide Wells. https://github.com/DavidWells/analytics . The packge provides a hook, use-analtyics as a separate package,
+which I used to wrap my Components tag in _app.tsx. 
+
+
+The final code 😎:
+```typescript
+import googleAnalytics from '@analytics/google-analytics'
+import { Analytics } from 'analytics'
+import { AnalyticsProvider, useAnalytics } from 'use-analytics'
+
+/* Initialize analytics & load plugins */
+const analytics = Analytics({
+  app: 'awesome-app',
+  plugins: [
+    googleAnalytics({
+      measurementIds: ['<YOUR Analytics Profile ID>'],
+    }),
+  ],
+})
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <AnalyticsProvider instance={analytics}>
+     <div id="outer-container">
+          <Nav />
+          <Menubar />
+          <div id="page-wrap">
+            <Component {...pageProps} />
+            <Footer />
+          </div>
+        </div>
+    </AnalyticsProvider>
+    )
+    };
+```
