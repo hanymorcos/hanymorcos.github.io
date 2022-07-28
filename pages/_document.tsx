@@ -15,9 +15,6 @@ class MyDocument extends Document {
   }
 
   render() {
-    /* Track a page view */
-    mysiteanalytic.page()
-
     return (
       <Html lang="en">
         <Head>
