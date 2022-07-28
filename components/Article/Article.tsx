@@ -3,6 +3,7 @@ import styles from './Article.module.css'
 import socials from '../../.generated/meta/socialsTs'
 import Author from '../Author'
 import SeoContainer from '../SeoContainer'
+import Comment from '../Comment'
 
 type ArticleProps = {
   children: React.ReactChild
@@ -60,6 +61,7 @@ export default function Article({
             </div>
             <img alt={title} src={cover} width="100%" loading="lazy" />
             <div className="article-content">{children}</div>
+            <Comment />
             {!hideAuthor && <Author />}
           </div>
         </div>
