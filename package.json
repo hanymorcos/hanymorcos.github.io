@@ -14,7 +14,7 @@
     "test:e2e": "playwright test",
     "test:e2e:ci": "cross-env CI=true playwright test",
     "image": "yarn image:optimization",
-    "image:optimization": "dx-scripts image public/raw/*.png -o public/optimized --png",
+    "image:optimization": "dx-scripts image  public/articles/**/*.png public/raw/*.png -o public/optimized --png",
     "image:shields": "node scripts/shields.mjs",
     "meta": "node scripts/meta.mjs",
     "github": "node scripts/github.mjs",
