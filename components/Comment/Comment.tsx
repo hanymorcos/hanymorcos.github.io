@@ -7,9 +7,9 @@ const Comments = () => {
 
   const status = useScript({
     url: 'https://utteranc.es/client.js',
-    theme: 'github-dark',
+    theme: 'github-light',
     issueTerm: 'url',
-    repo: 'hanymorcos/hanymorcos.github.io',
+    repo: 'hanymorcos/utterances',
     ref: comment,
   })
 
