@@ -23,9 +23,8 @@ export default function Contact({ heading }: ContactProps) {
       <p>
         I'm always learning and exploring. With my experience as a Principal
         Software Engineer and Tech Lead in startups and public tech companies
-        across North America, Europe, and Asia, I'm able to help you materialize
-        your innovative ideas with well-rounded tech insight, analysis, and
-        monitoring.
+        across North America I'm able to help you materialize your innovative
+        ideas with well-rounded tech insight, analysis, and monitoring.
       </p>
       <p>
         In general, my work is centered around consultation, innovation, and
