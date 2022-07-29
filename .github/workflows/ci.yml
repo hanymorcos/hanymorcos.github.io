@@ -88,6 +88,18 @@ jobs:
       - name: Build project
         run: yarn build
 
+      - name: Install WASM-PACK
+        run: npm i wasm-pack
+        
+      - name: Install wasm-opt
+        run: npm i wasm-opt
+      
+      - name: Install twiggy
+        run: cargo install twiggy
+        
+      - name: Build WASM
+        run: yarn fulltext-search
+        
       - name: Export Static Assets
         run: yarn export
         
