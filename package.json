@@ -2,7 +2,7 @@
   "name": "hanymorcos.github.io",
   "version": "0.0.45",
   "private": true,
-  "type": "module", 
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build ",
@@ -48,6 +48,7 @@
     "@remark-embedder/transformer-oembed": "^3.0.0",
     "analytics": "^0.8.1",
     "clsx": "^1.1.1",
+    "markdown-wasm": "^1.2.0",
     "mdx-embed": "^1.0.0",
     "next": "12.2.2",
     "normalize.css": "^8.0.1",
