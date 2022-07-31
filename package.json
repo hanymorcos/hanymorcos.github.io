@@ -2,6 +2,7 @@
   "name": "hanymorcos.github.io",
   "version": "0.0.45",
   "private": true,
+  "type": "module", 
   "scripts": {
     "dev": "next dev",
     "build": "next build ",
@@ -41,8 +42,13 @@
   },
   "dependencies": {
     "@analytics/google-analytics": "^1.0.3",
+    "@mdx-js/loader": "^2.1.2",
+    "@next/mdx": "^12.2.3",
+    "@remark-embedder/core": "^3.0.1",
+    "@remark-embedder/transformer-oembed": "^3.0.0",
     "analytics": "^0.8.1",
     "clsx": "^1.1.1",
+    "mdx-embed": "^1.0.0",
     "next": "12.2.2",
     "normalize.css": "^8.0.1",
     "prism-themes": "^1.9.0",
@@ -51,6 +57,8 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-transition-group": "^4.4.1",
+    "rehype-external-links": "^2.0.0",
+    "remark-frontmatter": "^4.0.1",
     "use-analytics": "^0.0.5",
     "yarn": "^1.22.19"
   },
