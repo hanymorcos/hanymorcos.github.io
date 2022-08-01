@@ -12,8 +12,6 @@ const nextconfig= {
     // opt-in to SWC's JavaScript minification instead of Terser
     swcMinify: true,
 
-    experiments : { asyncWebAssembly: true },
-
     webpack: function (config, { isServer }) {
       config.module.rules.push({
         test: /\.md$/,
