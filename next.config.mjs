@@ -19,15 +19,6 @@ const nextconfig= {
       })
 
       config.module.rules.push({
-          type: "webassembly/async",
-          generator: {
-            // important, otherwise it will output into a folder that is not served by next
-            filename: (isServer)? './../static/wasm/[modulehash].wasm' : 'static/wasm/[modulehash].wasm'
-            
-          }
-        })
-
-      config.module.rules.push({
         test: /\.svg$/i,
         issuer: /\.[jt]sx?$/,
         use: ['@svgr/webpack'],
