@@ -35,6 +35,20 @@ const nextconfig= {
         use: ['@svgr/webpack'],
       })
 
+
+      // wasm support workaround
+      // https://github.com/vercel/next.js/issues/25852
+      if (isServer) {
+        config.output.webassemblyModuleFilename =
+          './../static/wasm/[modulehash].wasm'
+      } else {
+        config.output.webassemblyModuleFilename =
+          'static/wasm/[modulehash].wasm'
+      }
+      
+      config.experiments = { ...config.experiments, asyncWebAssembly: true }
+
+      return config 
     },
   }
 
