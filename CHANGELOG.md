@@ -1,5 +1,7 @@
 undefined
 
+## 0.0.47 (2022-08-01)undefined
+
 ## 0.0.46 (2022-07-29)undefined
 
 ## 0.0.45 (2022-07-29)undefined
