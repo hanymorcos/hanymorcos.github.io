@@ -2,6 +2,7 @@
   "name": "hanymorcos.github.io",
   "version": "0.0.45",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build ",
@@ -21,17 +22,12 @@
     "sitemap": "node scripts/sitemap.mjs",
     "rss": "node --experimental-json-modules scripts/rss.mjs",
     "fulltext-search": "node --experimental-json-modules scripts/fulltext-search/index.mjs && cargo run scripts/fulltext-search && rm wasm/fulltext-search/pkg/.gitignore",
-    "prepare": "yarn meta && yarn image && yarn github",
+    "prepare": "yarn meta && yarn image && yarn github && husky install",
     "lighthouse:dev": "dx-scripts lighthouse http://localhost:3000/",
     "lighthouse:prod": "dx-scripts lighthouse https://hanymorcos.github.io/",
     "deploy": "rm -rf node_modules/.cache && yarn build && yarn export && touch out/.nojekyll && git add out/ && git commit -m \"chore: deploy to gh-pages\" && git subtree push --prefix out origin gh-pages",
     "release": "release-it",
     "analyze": "cross-env ANALYZE=true yarn build"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -41,9 +37,16 @@
   },
   "dependencies": {
     "@analytics/google-analytics": "^1.0.3",
+    "@mdx-js/loader": "^2.1.2",
+    "@mdx-js/react": "^2.1.2",
+    "@next/mdx": "^12.2.3",
+    "@remark-embedder/core": "^3.0.1",
+    "@remark-embedder/transformer-oembed": "^3.0.0",
     "analytics": "^0.8.1",
     "clsx": "^1.1.1",
+    "mdx-embed": "^1.0.0",
     "next": "12.2.2",
+    "node-fetch": "^2.6.1",
     "normalize.css": "^8.0.1",
     "prism-themes": "^1.9.0",
     "react": "^17.0.2",
@@ -51,6 +54,8 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-transition-group": "^4.4.1",
+    "rehype-external-links": "^2.0.0",
+    "remark-frontmatter": "^4.0.1",
     "use-analytics": "^0.0.5",
     "yarn": "^1.22.19"
   },
@@ -82,7 +87,6 @@
     "eslint-plugin-react-hooks": "^4.1.2",
     "globby": "^13.0.0",
     "got": "^12.1.0",
-    "husky": "^4.3.0",
     "jest": "^27.5.1",
     "jest-next-dynamic": "^1.0.1",
     "lint-staged": "^10.4.0",

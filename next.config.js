@@ -1,10 +1,19 @@
-const { withContentlayer } = require('next-contentlayer')
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
+import { withContentlayer }  from 'next-contentlayer'
+import withBundleAnalyzer from '@next/bundle-analyzer'
 
-module.exports = withContentlayer()(
+import remarkFrontmatter from 'remark-frontmatter'
+import remarkGfm from 'remark-gfm'
+import rehypeExternalLinks from 'rehype-external-links'
+
+import fauxRemarkEmbedder from '@remark-embedder/core'
+import fauxOembedTransformer from '@remark-embedder/transformer-oembed'
+const remarkEmbedder = fauxRemarkEmbedder.default
+const oembedTransformer = fauxOembedTransformer.default
+
+export default withContentlayer()(
   withBundleAnalyzer({
+
+  enabled: process.env.ANALYZE === 'true',
     // for deployment to github pages
     assetPrefix: '',
 
@@ -13,8 +22,20 @@ module.exports = withContentlayer()(
 
     webpack: function (config, { isServer }) {
       config.module.rules.push({
-        test: /\.md$/,
-        use: 'raw-loader',
+        test: /\.mdx?$/,
+        use: [
+          {
+            loader: '@mdx-js/loader',
+            options: {
+              rehypePlugins: [rehypeExternalLinks],
+              remarkPlugins: [
+                remarkGfm,
+                remarkFrontmatter,
+                [remarkEmbedder, { transformers: [oembedTransformer] }]
+              ]
+            }
+          }
+        ]
       })
 
       config.module.rules.push({

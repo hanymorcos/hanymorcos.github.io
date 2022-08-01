@@ -1,21 +1,32 @@
 import React from 'react'
-import { useMDXComponent } from 'next-contentlayer/hooks'
 import components from '../../components/MDXComponents'
 import Article from '../../components/Article'
 import { allArticles } from '.contentlayer/data'
 import type { Article as ArticleType } from '.contentlayer/types'
+import dynamic from 'next/dynamic'
+import { MDXProvider } from '@mdx-js/react'
+import { YouTube} from 'mdx-embed'
 
 type PostProps = {
   post: ArticleType
 }
 
-export default function Post({ post }: PostProps) {
-  const Component = useMDXComponent(post.body.code)
+export default function Post({ post }: PostProps) {  // import mdx
+  const Post = dynamic(import(`data/content/articles/${post}.mdx`))
+
+  // dynamic import because not ESM compatible
+  const embeds = dynamic<typeof YouTube>(import('mdx-embed').then(module =>   module.YouTube));
+  const { YouTube} = embeds
+
+  const components = {
+    YouTube
+  }
 
   return (
-    <Article {...post}>
-      <Component components={components} />
-    </Article>
+    <MDXProvider components={components}>
+    <Post />
+  </MDXProvider>
+  
   )
 }
 
