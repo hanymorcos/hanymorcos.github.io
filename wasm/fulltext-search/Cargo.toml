@@ -2,11 +2,11 @@
 name = "fulltext-search-core"
 version = "0.1.0"
 edition = "2021"
-authors = ["Hany Morcos Liou <dawochih.liou@gmail.com>"]
+authors = ["Hany Morcos<hanymorcos@live.com>"]
 description = "Full text search made by Rust and WebAssembly"
 license = "MIT"
-documentation = "https://github.com/DawChihLiou/dawchihliou.github.io/blob/main/README.md"
-homepage = "https://github.com/DawChihLiou/dawchihliou.github.io"
+documentation = "https://github.com/hanymorcos.github.io"
+homepage = "https://hany.tech"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
