@@ -1,7 +1,6 @@
 {
  "name": "Slide Reader",
  "short_name": "Slide Reader",
- "start_url": "./",
  "scope": "./",
  "display": "standalone",
  "orientation": "any",
