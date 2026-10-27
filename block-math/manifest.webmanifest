@@ -1,7 +1,6 @@
 {
  "name": "Block Math",
  "short_name": "Block Math",
- "start_url": "./",
  "scope": "./",
  "display": "standalone",
  "orientation": "any",
